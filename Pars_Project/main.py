@@ -34,19 +34,15 @@ for i in range(2, max_column+1):
                 print('-------------------\n Суббота \n--------------------\n')
 
             lesson = sheet.cell(row=j, column=i).value
+            lesson_type = sheet.cell(row=j, column=i+1).value
             prepod = sheet.cell(row=j, column=i+2).value
             audit = sheet.cell(row=j, column=i+3).value
             time_start = sheet.cell(row=j, column=i-3).value
             time_end = sheet.cell(row=j, column=i-2).value
 
+
             if lesson:
-                print(lesson, "|",  prepod, "|", audit)
-        #print(lesson)
-        #print(' ')
+                print(lesson, "|", lesson_type, "|",prepod, "|", audit)
 
-#17 31 45 59 73 87
 
-import json
-import sys
 
-sys.stdout = ('declare.js')
